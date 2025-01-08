@@ -5,8 +5,10 @@
         SampleSpace
 """
 
+from infera.real_analysis.set import Set
 
-class SampleSpace(set):
+
+class SampleSpace(Set):
     """
     This is the sample space class
 
@@ -15,4 +17,4 @@ class SampleSpace(set):
     """
 
     def __init__(self):
-        pass
+        super().__init__()

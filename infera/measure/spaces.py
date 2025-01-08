@@ -13,7 +13,7 @@ from infera.measure.sample_space import SampleSpace
 from infera.measure.sigma_algebra import SigmaAlgebra
 
 
-class MeasurableSpace(set):
+class MeasurableSpace:
     """
     This class defines a measurable space:
     A sample space and it's sigma algebra is together a measurable space

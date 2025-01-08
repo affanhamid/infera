@@ -8,9 +8,10 @@
 from itertools import combinations
 
 from infera.measure.sample_space import SampleSpace
+from infera.real_analysis.set import Set
 
 
-class SigmaAlgebra(set):
+class SigmaAlgebra(Set):
     """
     This class defines the mathematical object sigma algebra.
 
@@ -26,6 +27,7 @@ class SigmaAlgebra(set):
     """
 
     def __init__(self, sample_space: SampleSpace):
+        super().__init__()
         if not bool(sample_space):
             raise ValueError("Underlying set cannot be empty")
 
