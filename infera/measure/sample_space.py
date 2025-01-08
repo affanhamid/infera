@@ -16,5 +16,14 @@ class SampleSpace(Set):
     contains every possible outcome of an experiment
     """
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, *args, **kwargs):
+        super().__init__(args, kwargs)
+
+    @classmethod
+    def validate(cls, sample_space: Set):
+        """
+        Function to validate if a given set is a sample space
+        Checks for:
+        - Whether the sample space is empty
+        """
+        return bool(sample_space), ""

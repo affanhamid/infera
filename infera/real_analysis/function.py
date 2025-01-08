@@ -15,9 +15,13 @@ class Function:
     This class defines a generic mathematical function
     """
 
-    def __init__(self, domain: Set, codomain: Set):
+    def __init__(self, domain: Set, codomain: Set, expression: FunctionType):
         self.domain = domain
         self.codomain = codomain
+        self.expression = expression
+
+    def __call__(self, *args, **kwargs):
+        return self.expression(args, kwargs)
 
 
 class RealValuedFunction(Function):
@@ -25,6 +29,5 @@ class RealValuedFunction(Function):
     This class defines a function whose codomain is the real field
     """
 
-    def __init__(self, domain: Set, codomain: Set, expression: FunctionType):
-        super().__init__(domain, codomain)
-        self.expression = expression
+    def __init__(self, domain: Set, codomain: Set, expression):
+        super().__init__(domain, codomain, expression)

@@ -15,7 +15,7 @@ class Field(Set):
     """
 
     @classmethod
-    def check_field(cls, field: "Field"):
+    def validate(cls, field: "Field"):
         """
         This function tests if a given input is a field by the field axioms
         """
@@ -28,7 +28,7 @@ class Reals(Field):
     """
 
     @classmethod
-    def check_real_field(cls, field: Field):
+    def validate(cls, field: Field):
         """
         This function tests if a given input is a field and a real field
         """

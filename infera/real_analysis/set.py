@@ -11,5 +11,5 @@ class Set(set):
     This class defines a mathematical set
     """
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         return

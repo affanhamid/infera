@@ -26,17 +26,15 @@ class SigmaAlgebra(Set):
     methods:
     """
 
-    def __init__(self, sample_space: SampleSpace):
-        super().__init__()
+    def __init__(self, sample_space: SampleSpace, *args, **kwargs):
+        super().__init__(args, kwargs)
         if not bool(sample_space):
             raise ValueError("Underlying set cannot be empty")
 
         self.underlying_set = sample_space
 
     @classmethod
-    def validate_sigma_algebra(
-        cls, sample_space: SampleSpace, sigma_algebra: "SigmaAlgebra"
-    ):
+    def validate(cls, sample_space: SampleSpace, sigma_algebra: "SigmaAlgebra"):
         """
         This function tests the given sigma algebra using the axioms:
         1. null set must belong to sigma algebra
